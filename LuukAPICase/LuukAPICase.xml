@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LuukAPICase</name>
+    </assembly>
+    <members>
+        <member name="M:LuukAPICase.Controllers.AddressController.GetAddresses">
+            <summary>
+            Gets all the addresses in the database.
+            </summary>
+            <returns>A list of Address objects.</returns>
+            <response code="200">The addresses were found.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.GetAddress(Id)">
+            <summary>
+            Gets a specific address from the database.
+            </summary>
+            <param name="id">The id of the requested address.</param>
+            <returns>An Address object.</returns>
+            <response code="200">The address was found.</response>
+            <response code="404">No address was found with that id.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.PutAddress(System.Id,LuukAPICase.Models.Address)">
+            <summary>
+            Updates an address in the database.
+            </summary>
+            <param name="id">The id of the to-be updated address.</param>
+            <param name="address">The address to be saved in the database.</param>
+            <returns>A status code.</returns>
+            <response code="204">The address was updated in the database.</response>
+            <response code="400">The entered id does not correspond to the id of the object.</response>
+            <response code="404">No address was found with that id.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.PostAddress(LuukAPICase.Models.Address)">
+            <summary>
+            Saves an address in the database.
+            </summary>
+            <param name="address">The to-be saved address.</param>
+            <returns>A status code with the address.</returns>
+            <response code="201">The address was saved in the database.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.DeleteAddress(System.Id)">
+            <summary>
+            Deletes an address from the database.
+            </summary>
+            <param name="id">The id of the to-be deleted address.</param>
+            <returns>A status code.</returns>
+            <response code="204">The address was deleted.</response>
+            <response code="404">No address was found with that id.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.Search(System.String,System.String,System.String)">
+            <summary>
+            Search through the database.
+            </summary>
+            <param name="column">What column to search through.</param>
+            <param name="comparator">What to compare the searched column to.</param>
+            <param name="order">What to order the results by.</param>
+			<param name="suffix">Choose ASC or DESC</param>
+            <returns>A list of addresses matching the entered search query.</returns>
+            <response code="200">The query was executed succesfully and results were found.</response>
+            <response code="400">The query could not be executed due to one or more parameters being null.</response>
+            <response code="404">The query was executed succesfully but no results were found.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.CalculateDistance(System.Id,System.Id)">
+            <summary>
+            Calculate the distance between two addresses.
+            </summary>
+            <param name="addressId1">The id of the first address.</param>
+            <param name="addressId2">The id of the second address.</param>
+            <returns>The distance in kilometres as a string.</returns>
+            <response code="200">The distance was calculated.</response>
+            <response code="404">One or both of the addresses were not found.</response>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.CalculateDifferenceBetweenCoords(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Calculates the difference between two coordinates.
+            </summary>
+            <param name="lat1">Latitude of the first coordinate.</param>
+            <param name="long1">Longitude of the first coordinate.</param>
+            <param name="lat2">Latitude of the second coordinate.</param>
+            <param name="long2">Longitude of the second coordinate.</param>
+            <returns>The distance in kilometres as a double.</returns>
+        </member>
+        <member name="M:LuukAPICase.Controllers.AddressController.AddressExists(System.Id)">
+            <summary>
+            Checks if an address exists with the given id.
+            </summary>
+            <param name="id">The id of the address.</param>
+            <returns>True when the address exists, otherwise false.</returns>
+        </member>
+    </members>
+</doc>
