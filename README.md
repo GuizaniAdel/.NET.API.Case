@@ -134,7 +134,7 @@ To esure that the this case works in its best manners we can implement Unit test
 ### Result Search DESC
 ![Logic](https://user-images.githubusercontent.com/73751988/197684957-8532d1d1-95d6-4dc3-8649-d4e8aa27a8ab.png)
 
-### Distance Between Me And My Goal (The Netherlands - Tunisia)
+### Distance Between Netherlands - Tunisia
 ![Logic](https://user-images.githubusercontent.com/73751988/197685174-433d59dd-4901-4566-b72f-4693b966fedf.png)
 
 ### Distance Verification
